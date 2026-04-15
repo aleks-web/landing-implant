@@ -1,0 +1,22 @@
+@use "../fonts/Inter";
+@use "../utils";
+
+.footer {
+  @include Inter.setFont(14px, 400);
+  color: #94A3B8;
+  margin-bottom: 20px;
+  margin-top: 20px;
+
+  @include utils.from('sm') {
+    font-size: 16px;
+    margin-top: 30px;
+  }
+
+  @include utils.from('md') {
+    margin-top: 40px;
+  }
+
+  &__container {
+    overflow: hidden;
+  }
+}

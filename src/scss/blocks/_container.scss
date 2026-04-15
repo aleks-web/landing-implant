@@ -1,0 +1,24 @@
+@use "../utils";
+
+.container {
+  margin: 0 auto;
+  max-width: 1330px;
+  width: 100%;
+  padding: 0 10px;
+
+  @include utils.from('s') {
+    padding: 0 15px;
+  }
+
+  @include utils.from('sm') {
+    padding: 0 25px;
+  }
+
+  @include utils.from('lg') {
+    padding: 0 30px;
+  }
+
+  @include utils.from('xl') {
+    padding: 0 36px;
+  }
+}

@@ -1,0 +1,25 @@
+@use 'fonts/Inter';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  @include Inter.setFont(16px);
+}
+
+img {
+  width: 100%;
+}
+
+button {
+  cursor: pointer;
+}
+
+.content {
+  background-color: #F0F2FF;
+  overflow: hidden;
+  position: relative;
+}

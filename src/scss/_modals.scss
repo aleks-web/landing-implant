@@ -1,0 +1,182 @@
+@use "fonts/Inter";
+@use "utils";
+
+.loading {
+  z-index: 50 !important;
+}
+
+.modal-wrapper {
+  padding: 10px;
+  overflow: hidden;
+  width: 100%;
+  @include Inter.setFont(24px, 500);
+}
+
+.modal-wrapper--loading {
+  pointer-events: none;
+}
+
+.modal-wrapper--loading .modal {
+  position: relative;
+
+  &:before {
+    content: "";
+    box-sizing: border-box;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 24px;
+    height: 24px;
+    margin-top: -12px;
+    margin-left: -12px;
+    border-radius: 50%;
+    border: 2px solid #ccc;
+    border-top-color: var(--main-color);
+    animation: spinner 600ms linear infinite;
+    z-index: 10;
+  }
+}
+
+@keyframes spinner {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.modal {
+  &__header {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  &__closeBtn {
+    cursor: pointer;
+    transition: .2s all;
+    padding: 5px;
+    box-sizing: content-box;
+
+    &:hover {
+      color: red;
+    }
+  }
+
+  &__wrap {
+    height: 100%;
+    padding: 20px;
+    width: 100%;
+    overflow-x: auto;
+  }
+}
+
+.modal-success {
+  .modal__wrap {
+    border-radius: 20px;
+    background-color: white;
+  }
+
+  &__title {
+    font-size: 20px;
+    color: #2A2A2A;
+
+    @include utils.from('s') {
+      font-size: 30px;
+    }
+
+    @include utils.from('sm') {
+      font-size: 40px;
+    }
+
+    @include utils.from('md') {
+      font-size: 50px;
+    }
+
+    span {
+      color: #2f3fb7;
+    }
+  }
+
+  &__desc {
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    font-weight: 300;
+
+    @include utils.from('sm') {
+      font-size: 18px;
+    }
+
+    @include utils.from('md') {
+      font-size: 22px;
+    }
+
+    > span > span {
+      color: var(--main-color);
+      font-weight: 600;
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+
+    @include utils.from('md') {
+      flex-direction: row;
+    }
+
+    @include utils.from('md') {
+      margin-top: 40px;
+    }
+
+    &-text {
+      font-size: 16px;
+      text-align: center;
+
+      @include utils.from('md') {
+        max-width: 280px;
+        text-align: left;
+        font-weight: 400;
+      }
+    }
+  }
+
+  &__left {
+    @include Inter.setFont(14px, 300);
+  }
+
+  &__right {
+    @include Inter.setFont(14px, 300);
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    > span {
+      text-align: center;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+
+      @include utils.from('md') {
+        justify-content: right;
+      }
+    }
+
+    a {
+      text-decoration: unset;
+      color: #2A2A2A;
+      font-weight: bold;
+      font-size: 18px;
+      text-align: center;
+      justify-content: center;
+      display: flex;
+      margin: 0 auto;
+
+      @include utils.from('md') {
+        font-size: 22px;
+      }
+    }
+  }
+}
