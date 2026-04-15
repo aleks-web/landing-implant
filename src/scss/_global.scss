@@ -1,4 +1,5 @@
-@use "../utils";
+@use 'fonts/Inter';
+@use "utils";
 
 .container {
   margin: 0 auto;
@@ -21,4 +22,22 @@
   @include utils.from('xl') {
     padding: 0 36px;
   }
+}
+
+body {
+  @include Inter.setFont(16px);
+}
+
+img {
+  width: 100%;
+}
+
+button {
+  cursor: pointer;
+}
+
+.content {
+  background-color: #F0F2FF;
+  overflow: hidden;
+  position: relative;
 }
