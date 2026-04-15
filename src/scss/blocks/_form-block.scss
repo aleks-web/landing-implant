@@ -1,10 +1,7 @@
 @use "../fonts/Inter";
 @use "../utils";
 
-.form-block {
-  background-color: #464C57;
-  border-radius: 24px;
-  padding: 20px 0;
+.form-block {  
 
   @include Inter.setFont(14px, 400);
   color: #94A3B8;
@@ -39,6 +36,9 @@
   }
 
   &__container {
+    background-color: #464C57;
+    border-radius: 24px;
+    padding: 20px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;

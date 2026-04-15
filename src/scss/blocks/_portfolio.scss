@@ -1,0 +1,59 @@
+@use "../fonts/Inter";
+@use "../utils";
+
+.portfolio {
+    text-align: center;
+    margin-top: 30px; 
+
+  @include Inter.setFont(14px, 400);
+
+  @include utils.from('sm') {
+    font-size: 16px;
+  }
+
+  @include utils.from('md') {
+    margin-top: 40px;    
+  }
+
+  &__title {
+    margin-bottom: 10px;
+  }
+
+  &__descr {
+    color: #777;
+    margin-bottom: 50px;
+  }
+
+  &__images {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 10px;
+  }
+
+  &__img {
+    border-radius: 24px;
+    overflow: hidden;
+
+    &:first-child {
+        grid-column: 1 / span 2;
+    }
+
+  }
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 14px;
+    color: #001F2E;
+    padding: 10px 15px;
+    border-radius: 15px;
+    border: unset;
+    background-color: var(--main-color);
+    box-shadow: 0px 10px 15px -3px #7DD3FC33;
+    width: 100%;
+    margin-top: 15px;
+  }
+}
