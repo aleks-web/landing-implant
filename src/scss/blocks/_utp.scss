@@ -1,0 +1,95 @@
+@use "../fonts/Inter";
+@use "../utils";
+
+.utp {
+  background-color: #cae9f7;
+  padding: 20px 0;
+
+  @include Inter.setFont(14px, 400);
+  margin-bottom: 20px;
+  margin-top: 20px;
+
+  @include utils.from('sm') {
+    font-size: 16px;
+
+  }
+
+  @include utils.from('md') {
+    margin-top: 40px;    
+ 
+    &__wrap {
+        display: grid!important;
+        grid-template-columns: repeat(6, 1fr)!important;
+        grid-template-rows: repeat(2, 1fr)!important;
+        grid-template-areas:
+        "a a b b c c"
+        "d d d e e e"!important;
+    }
+
+    .item {
+        &__title {
+            font-size: 18px;
+            font-weight: bold;
+            line-height: 1.5em;
+        } 
+    }
+  }
+
+  &__title {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  &__wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .item {
+    background-color: #6f7683;
+    border-radius: 24px;
+    padding: 15px;
+    color: #d2dbe0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+
+    &__svg {
+        background-color: rgba(138, 218, 255, 0.1);
+        border-radius: 10px;
+        padding: 10px;
+
+        svg {
+            width: 20px;
+            height: 20px;
+        }
+    }
+
+    &__title {
+        font-size: 18px;
+        font-weight: bold;
+    }  
+  }
+  .item1 {
+        grid-area: a;
+    }
+
+    .item2 {
+        grid-area: b;
+    }
+
+    .item3 {
+        grid-area: c;
+    }
+
+    .item4 {
+        grid-area: d;
+    }
+
+    .item5 {
+        grid-area: e;
+    }
+}
