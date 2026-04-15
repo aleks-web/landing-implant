@@ -1,0 +1,68 @@
+@use "../fonts/Inter";
+@use "../utils";
+
+.our-doctors {
+    color: #fff;
+    margin: 30px 0;
+    @include Inter.setFont(14px, 400);
+
+    @include utils.from('sm') {
+        font-size: 16px;
+    }
+
+    @include utils.from('md') {
+        margin-top: 40px;    
+    }
+
+    &__container {
+        padding: 20px 20px 0 20px;
+        background-color: #464C57;
+        border-radius: 24px;
+    }
+
+    &__title {
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    &__descr {
+        color: #8892aa;
+        line-height: 1.5em;
+        margin-bottom: 40px;
+        text-align: center;
+    }
+
+    &__wrap {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        font-weight: 200;
+        line-height: 1.5em;
+    }
+
+    .item {
+        display: flex;
+        gap: 10px;
+
+        &__svg {
+            background-color: rgba(138, 218, 255, 0.1);
+            border-radius: 100%;
+            padding: 3px 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;    
+
+            svg {
+                width: 20px;
+                height: 20px;
+            }
+        }
+
+        &__title {
+            span {
+                font-size: 11px;
+                font-weight: 400;
+            }
+        }
+    }
+}
