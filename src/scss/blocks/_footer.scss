@@ -13,11 +13,47 @@
 
   @include utils.from('sm') {
     font-size: 16px;
-    margin-top: 30px;
+    margin-top: 30px;   
+    
+    &__fullwidth {
+      flex-direction: row!important;
+    }
+
+    .address {
+      flex-direction: column!important;
+      gap: 0!important;
+      align-items: flex-start!important;
+
+      &__town {
+        font-size: 12px!important;
+      }
+
+      &__streets {
+        flex-direction: row!important;
+        font-size: 14px!important;
+        gap: 10px!important;
+      }
+
+      &:before {
+        top: 6px!important;
+      }
+    }
   }
 
   @include utils.from('md') {
     margin-top: 40px;
+    padding: 20px 0;    
+
+    &__call-btns {
+      margin: 0!important;
+      flex-direction: row!important;
+      gap: 5px!important;
+      width: max-content!important;
+    }
+
+    &__btn {
+      padding: 6px 15px!important;
+    }
   }
 
   &__container {
@@ -27,14 +63,22 @@
     align-items: center;
   }
 
+  &__fullwidth {
+    margin: 30px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    width: 100%;
+  }
+
   &__logo-img {
     filter: invert(1);
     max-width: 150px;
-    padding-bottom: 50px;
   }
 
   &__call-btns {
-    margin: 30px 0;
     display: flex;
     flex-direction: column;
     gap: 5px;
@@ -89,7 +133,6 @@
     width: 100%;
     height: 1px;
     background-color: #000;
-    margin: 30px;
   }
 
   .tel-worktime {
@@ -106,20 +149,22 @@
 
   .address {
     display: flex;
-    flex-direction: column;
+    align-items: center;
+    gap: 20px;
     position: relative;
+    margin-left: 25px;
 
     &:before {
       content: '';
       position: absolute;
-      top: 5px;
+      top: 11px;
       left: -25px;
       display: flex;
       align-items: center;
       justify-content: center;
       background-repeat: no-repeat;
       background-size: cover;
-      background-image: url('data:image/svg+xml,<svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 16L10 12.95L14 16L12.5 11.05L16.5 8.2H11.6L10 3L8.4 8.2H3.5L7.5 11.05L6 16ZM10 20C8.61667 20 7.31667 19.7375 6.1 19.2125C4.88333 18.6875 3.825 17.975 2.925 17.075C2.025 16.175 1.3125 15.1167 0.7875 13.9C0.2625 12.6833 0 11.3833 0 10C0 8.61667 0.2625 7.31667 0.7875 6.1C1.3125 4.88333 2.025 3.825 2.925 2.925C3.825 2.025 4.88333 1.3125 6.1 0.7875C7.31667 0.2625 8.61667 0 10 0C11.3833 0 12.6833 0.2625 13.9 0.7875C15.1167 1.3125 16.175 2.025 17.075 2.925C17.975 3.825 18.6875 4.88333 19.2125 6.1C19.7375 7.31667 20 8.61667 20 10C20 11.3833 19.7375 12.6833 19.2125 13.9C18.6875 15.1167 17.975 16.175 17.075 17.075C16.175 17.975 15.1167 18.6875 13.9 19.2125C12.6833 19.7375 11.3833 20 10 20Z" fill="%23C8A0F0"/></svg>');
+      background-image: url("data:image/svg+xml;charset=UTF-8, %3csvg viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='24' height='24' rx='12' fill='white'/%3e%3cpath d='M12.0013 11.7057C11.6145 11.7057 11.2436 11.5521 10.9701 11.2786C10.6966 11.0051 10.543 10.6342 10.543 10.2474C10.543 9.86062 10.6966 9.48969 10.9701 9.2162C11.2436 8.94271 11.6145 8.78906 12.0013 8.78906C12.3881 8.78906 12.759 8.94271 13.0325 9.2162C13.306 9.48969 13.4596 9.86062 13.4596 10.2474C13.4596 10.4389 13.4219 10.6285 13.3486 10.8055C13.2753 10.9824 13.1679 11.1432 13.0325 11.2786C12.8971 11.414 12.7363 11.5214 12.5594 11.5947C12.3824 11.668 12.1928 11.7057 12.0013 11.7057ZM12.0013 6.16406C10.9183 6.16406 9.87972 6.59427 9.11395 7.36004C8.34818 8.12582 7.91797 9.16443 7.91797 10.2474C7.91797 13.3099 12.0013 17.8307 12.0013 17.8307C12.0013 17.8307 16.0846 13.3099 16.0846 10.2474C16.0846 9.16443 15.6544 8.12582 14.8887 7.36004C14.1229 6.59427 13.0843 6.16406 12.0013 6.16406Z' fill='%23242424'/%3e%3c/svg%3e ");
       width: 20px;
       min-width: 20px;
       aspect-ratio: 1;
@@ -131,7 +176,7 @@
 
     &__streets {
       display: flex;
-      gap: 10px;
+      flex-direction: column;
       font-size: 11px;
       font-weight: 600;
     }
