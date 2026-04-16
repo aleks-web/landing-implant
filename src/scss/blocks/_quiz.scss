@@ -11,15 +11,15 @@
     }
 
     @include utils.from('md') {
-      padding: 40px 20px;
-    }
-
-    @include utils.from('lg') {
-      padding: 50px 20px;
+      padding: 50px 50px;
     }
 
     @include utils.from('xl') {
-      padding: 60px 20px;
+      padding: 60px 60px;
+    }
+
+    @include utils.from('xl') {
+      padding: 70px;
     }
   }
 
@@ -112,6 +112,19 @@
     align-items: center;
     justify-content: center;
     margin-top: 20px;
+
+    @include utils.from('md') {
+      margin-top: 40px;
+      justify-content: flex-start;
+    }
+
+    @include utils.from('lg') {
+      margin-top: 50px;
+    }
+
+    @include utils.from('xl') {
+      margin-top: 60px;
+    }
   }
 
   &__icon {
@@ -127,8 +140,8 @@
       gap: 20px;
       align-items: center;
 
-      @include utils.from('sm') {
-
+      @include utils.from('md') {
+        flex-direction: row;
       }
     }
 
