@@ -1,0 +1,43 @@
+@use "../utils";
+
+.top-bg {
+  position: relative;
+  padding-bottom: 0;
+
+  @include utils.from('sm') {
+    padding-bottom: 10px;
+  }
+
+  @include utils.from('xxl') {
+    padding-bottom: 300px;
+  }
+
+  * {
+    position: relative;
+    z-index: 2;
+  }
+
+  &:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: '';
+    display: flex;
+    width: 100%;
+    height: calc(100% - 70px);
+    background-image: url('/src/assets/images/bg.webp');
+    z-index: 0;
+
+    @include utils.from('xxl') {
+      height: 100%;
+    }
+  }
+
+  & ~ .our-doctors {
+    @include utils.from('xxl') {
+      margin-top: -200px;
+      position: relative;
+      z-index: 1;
+    }
+  }
+}
