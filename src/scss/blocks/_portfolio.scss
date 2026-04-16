@@ -12,7 +12,25 @@
   }
 
   @include utils.from('md') {
-    margin-top: 40px;    
+    margin-top: 40px;   
+    text-align: left; 
+    
+    &__descr {
+      width: 75%;
+      line-height: 1em; 
+    }
+  }
+
+  @include utils.from('lg') {
+    &__descr {
+      width: 50%; 
+    }
+  }
+
+  @include utils.from('xl') {
+    &__descr {
+      width: 45%; 
+    }
   }
 
   &__title {
