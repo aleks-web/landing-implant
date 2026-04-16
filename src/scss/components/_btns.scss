@@ -1,5 +1,20 @@
 @use "../utils";
 
-.btn-rounded {
+.btn-an {
+  box-shadow: 0px 10px 15px -3px #7DD3FC33;
+  transition: all 0.2s linear;
+
+  svg {
+    transition: all 0.4s ease-in;
+  }
+
+  &:hover > svg {
+    transform: scale(1.1);
+  }
+
+  &:hover {
+    box-shadow: 9px 9px 33px #7dd3fc66, -9px -9px 33px #7dd3fc61;
+    transform: translateY(-2px);
+  }
 
 }
