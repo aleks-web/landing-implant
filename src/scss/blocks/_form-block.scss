@@ -26,12 +26,38 @@
     margin-top: 40px;    
 
     &__top {
-        width: 50%;
+      width: 50%;
+      gap: 10px!important;    
     }
 
     &__container {
-        flex-direction: row!important;
-        align-items: center;
+      flex-direction: row!important;
+      align-items: center;
+      padding: 30px 40px!important;
+    }
+
+    &__descr {
+      color: #fff;
+      font-weight: 300;
+    }
+  }
+
+  @include utils.from('lg') {  
+    &__container {
+      padding: 50px 40px 40px 40px!important;
+    }  
+
+    &__top {
+      gap: 0!important;    
+    }
+
+    &__form {
+      width: 50%;
+    }
+
+    &__input,
+    &__btn {
+      padding: 15px 30px!important;
     }
   }
 
@@ -76,9 +102,12 @@
     color: black;
     padding: 10px 15px;
     border-radius: 15px;
-    border: unset;
     background-color: #575c64;
     border: 1px solid #8a8f96;
+
+    &:focus {
+      outline: none;
+    }
   }
 
   &__btn {
@@ -87,19 +116,12 @@
     justify-content: center;
     font-weight: 700;
     font-size: 14px;
-    color: black;
     padding: 10px 15px;
     border-radius: 15px;
-    border: unset;
-    background-color: #e0e0e0;
-    border: 1px solid #aaa;
-
-    &--sign {
-      background-color: var(--main-color);
-      border-color: transparent;
-      color: #001F2E;
-      box-shadow: 0px 10px 15px -3px #7DD3FC33;
-    }
+    background-color: var(--main-color);
+    border-color: transparent;
+    color: #001F2E;
+    box-shadow: 0px 10px 15px -3px #7DD3FC33;
   }
 
 }
