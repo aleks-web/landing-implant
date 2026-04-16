@@ -12,6 +12,10 @@
     margin-top: 60px;
   }
 
+  @include utils.from('3xl') {
+    margin-top: 70px;
+  }
+
   &__container {
     --pd: 20px;
     background: linear-gradient(180deg, rgba(87, 146, 255, 1) -8.76%, #5578d0 38.08%);

@@ -9,7 +9,11 @@
   }
 
   @include utils.from('xxl') {
-    padding-bottom: 300px;
+    padding-bottom: 160px;
+  }
+
+  @include utils.from('3xl') {
+    padding-bottom: 250px;
   }
 
   &:before {
@@ -22,6 +26,9 @@
     height: calc(100% - 70px);
     background-image: url('/src/assets/images/bg.webp');
     z-index: 0;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 
     @include utils.from('xxl') {
       height: 100%;
@@ -30,9 +37,13 @@
 
   & ~ .our-doctors {
     @include utils.from('xxl') {
-      margin-top: -200px;
+      margin-top: -90px;
       position: relative;
       z-index: 1;
+    }
+
+    @include utils.from('3xl') {
+      margin-top: -180px;
     }
   }
 }

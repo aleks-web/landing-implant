@@ -1,0 +1,172 @@
+@use "../utils";
+
+.quiz-block {
+  &__container {
+    background: linear-gradient(90deg, rgba(81, 131, 255, 0.5625) 0%, rgba(76, 83, 219, 0.665264) 60.58%, rgba(70, 76, 87, 0.75) 100%);
+    border-radius: var(--main-radius);
+    padding: 20px 20px;
+
+    @include utils.from('s') {
+      padding: 30px 20px;
+    }
+
+    @include utils.from('md') {
+      padding: 40px 20px;
+    }
+
+    @include utils.from('lg') {
+      padding: 50px 20px;
+    }
+
+    @include utils.from('xl') {
+      padding: 60px 20px;
+    }
+  }
+
+  &__title {
+    color: white;
+    font-weight: 700;
+    text-align: center;
+    line-height: 23px;
+
+    @include utils.from('s') {
+      font-size: 20px;
+      line-height: 25px;
+    }
+
+    @include utils.from('sm') {
+      font-size: 24px;
+      line-height: 28px;
+    }
+
+    @include utils.from('md') {
+      font-size: 26px;
+    }
+
+    @include utils.from('lg') {
+      font-size: 30px;
+    }
+
+    @include utils.from('xl') {
+      font-size: 32px;
+    }
+  }
+
+  &__desc {
+    font-weight: 700;
+    font-size: 16px;
+    color: #252B39;
+    text-align: center;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    position: relative;
+
+    @include utils.from('s') {
+      font-size: 18px;
+    }
+
+    @include utils.from('sm') {
+      font-size: 20px;
+    }
+
+    @include utils.from('md') {
+      font-size: 22px;
+      margin-top: 20px;
+      flex-direction: row;
+      align-items: center;
+    }
+
+    @include utils.from('lg') {
+      font-size: 24px;
+    }
+
+    span {
+      position: relative;
+      z-index: 2;
+    }
+
+    &-pl {
+      display: block;
+      background-color: #8DFFFF;
+      max-width: max-content;
+      padding: 10px;
+      border-radius: 16px;
+      position: relative;
+      top: -10px;
+      transform: rotate(-3deg);
+
+      @include utils.from('s') {
+        top: 4px;
+      }
+
+      @include utils.from('md') { top: 0; }
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  &__icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    &s {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      align-items: center;
+
+      @include utils.from('sm') {
+
+      }
+    }
+
+    &-svg {
+      max-width: max-content;
+      padding: 15px;
+      border-radius: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+      min-width: 56px;
+      aspect-ratio: 1;
+
+      &:before {
+        content: '';
+        background-color: white;
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0.3;
+      }
+
+      svg {
+        width: 22px;
+        display: flex;
+      }
+    }
+
+    &-text {
+      text-transform: uppercase;
+      font-weight: 700;
+      color: white;
+      font-size: 14px;
+    }
+  }
+}
