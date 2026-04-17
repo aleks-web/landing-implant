@@ -2,13 +2,23 @@
 @use "../utils";
 
 .portfolio {
-    text-align: center;
-    margin-top: 30px; 
+  text-align: center;
+  margin: 30px 0 100px; 
 
   @include Inter.setFont(14px, 400);
 
   @include utils.from('sm') {
     font-size: 16px;
+
+    .splide__arrow {
+      &--prev {
+        left: 40%!important;
+      }
+
+      &--next {
+        right: 40%!important;
+      }
+    }
   }
 
   @include utils.from('md') {
@@ -24,6 +34,19 @@
   @include utils.from('lg') {
     &__descr {
       width: 50%; 
+    }
+
+    .splide__arrow {
+      top: 40%!important;
+      background-color: var(--main-color)!important;
+
+      &--prev {
+        left: 1em!important;
+      }
+
+      &--next {
+        right: 1em!important;
+      }
     }
   }
 
@@ -42,6 +65,14 @@
     margin-bottom: 50px;
   }
 
+  &__item {
+    // min-height: 300px;
+    // height: 100%;
+    // display: flex;
+    // flex-direction: column;
+    // justify-content: space-between;
+  }
+
   &__images {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -53,8 +84,15 @@
     border-radius: 24px;
     overflow: hidden;
 
+    img {
+      height: 100%;
+      max-height: 200px;
+      object-fit: cover;
+      object-position: 50% 70%;
+    }
+
     &:first-child {
-        grid-column: 1 / span 2;
+      grid-column: 1 / span 2;
     }
 
   }
@@ -73,5 +111,18 @@
     box-shadow: 0px 10px 15px -3px #7DD3FC33;
     width: 100%;
     margin-top: 15px;
+  }
+
+  .splide__arrow {
+    top: 110%;
+    background-color: unset;
+
+    &--prev {
+      left: 35%;
+    }
+
+    &--next {
+      right: 35%;
+    }
   }
 }
