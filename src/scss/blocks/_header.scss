@@ -211,7 +211,7 @@
 .info-stage {
   background-color: #3f4651;
   overflow: hidden;
-  @include utils.gRounded();
+  border-radius: var(--main-radius);
   padding: 15px 15px;
   display: flex;
   align-items: center;

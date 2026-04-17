@@ -10,6 +10,7 @@
 
   <body>
 
+    <!--
     <div class="top-bg">
       <header class="header">
         <div class="header__container container">
@@ -183,6 +184,7 @@
         </div>
       </div>
     </div>
+    -->
 
     <div class="quiz-block">
       <div class="quiz-block__container container">
@@ -191,6 +193,14 @@
         <div class="quiz-block__desc">
           <span>Ответьте на 4 вопроса и получите подарки</span>
           <div class="quiz-block__desc-pl">на 15 000 ₽</div>
+        </div>
+
+        <div class="quiz-block__header">
+          <div class="quiz-block__steps">
+            <span>Вопрос <span>1</span> из <span>4</span></span>
+          </div>
+
+          <div class="quiz-block__pagination"></div>
         </div>
 
         <div class="quiz-block__bottom">
@@ -225,6 +235,12 @@
             </div>
           </div>
 
+          <button class="quiz-block__btn">
+            <span>Далее</span>
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12.175 9H0V7H12.175L6.575 1.4L8 0L16 8L8 16L6.575 14.6L12.175 9Z" fill="white"/>
+            </svg>
+          </button>
 
         </div>
 
@@ -294,25 +310,34 @@
 
         <div class="portfolio__descr">Реальные истории пациентов, которые доверили нам свою улыбку и вернули уверенность в себе</div>
 
-        <div class="portfolio__wrap">
-          <div class="portfolio__item">
-            <div class="portfolio__images">
-              <div class="portfolio__img">
-                <img src="public/prodoctorovTrophyTop10.jpg">
+        <div class="splide portfolio__slider">
+          <div class="splide__track">
+            <div class="splide__list portfolio__wrap">
+
+              <div class="splide__slide">
+                <div class="portfolio__item">
+                  <div class="portfolio__images">
+                    <div class="portfolio__img">
+                      <img src="public/prodoctorovTrophyTop10.jpg">
+                    </div>
+
+                    <div class="portfolio__img">
+                      <img src="public/prodoctorovTrophyTop10.jpg">
+                    </div>
+
+                    <div class="portfolio__img">
+                      <img src="public/prodoctorovTrophyTop10.jpg">
+                    </div>
+                  </div>
+
+                  <button class="portfolio__btn btn-an">Хочу так же ♥</button>
+                </div>
               </div>
 
-              <div class="portfolio__img">
-                <img src="public/prodoctorovTrophyTop10.jpg">
-              </div>
-
-              <div class="portfolio__img">
-                <img src="public/prodoctorovTrophyTop10.jpg">
-              </div>
             </div>
-
-            <button class="portfolio__btn btn-an">Хочу так же ♥</button>
           </div>
         </div>
+
       </div>
     </div>
 

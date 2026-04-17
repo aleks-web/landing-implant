@@ -21,7 +21,7 @@
     background: linear-gradient(180deg, rgba(87, 146, 255, 1) -8.76%, #5578d0 38.08%);
     padding-top: var(--pd);
     padding-bottom: var(--pd);
-    @include utils.gRounded();
+    border-radius: var(--main-radius);
     color: white;
     gap: 50px;
     display: flex;
