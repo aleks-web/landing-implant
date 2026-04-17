@@ -42,7 +42,7 @@ $breakpoints: (
 @mixin pseudoBg($color: black) {
   &:before {
     background: $color;
-    opacity: 0.3;
+    opacity: 0.5;
     content: '';
     position: absolute;
     top: 0;

@@ -323,4 +323,12 @@ document.addEventListener('DOMContentLoaded', () => {
     .setQuestionElsBySelector('.quiz-block__question')
     .endSetSelectors();
 
+    window.quiz.setStep(5);
+
+    document.querySelector('.step-form').onsubmit = (e) => {
+        e.preventDefault();
+
+        console.log(e);
+    }
+
 });

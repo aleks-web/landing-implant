@@ -10,7 +10,6 @@
 
   <body>
 
-    <!--
     <div class="top-bg">
       <header class="header">
         <div class="header__container container">
@@ -184,10 +183,11 @@
         </div>
       </div>
     </div>
-    -->
 
     <div class="quiz-block">
       <div class="quiz-block__container container">
+
+        <img class="quiz-block__bg shaking" src="./src/assets/images/skullbig.webp" alt="skullbig">
 
         <div class="quiz-block__title">Рассчитайте стоимость лечения за 🕑 1 минуту</div>
         <div class="quiz-block__desc">
@@ -200,7 +200,9 @@
             <span>Вопрос <span class="quiz-block__steps-num">1</span> из <span>4</span></span>
           </div>
 
-          <div class="progress" style="--progress-width: 20%"></div>
+          <div class="quiz-block__progress" style="width: 100%;display: flex; justify-content: end;">
+            <div class="progress" style="--progress-width: 20%"></div>
+          </div>
         </div>
 
         <div class="quiz-block__question"></div>
@@ -321,6 +323,54 @@
                 </div>
               </div>
             </div>
+
+            <div class="qz__step-content step-5" data-step-options='{"step_id": "5", "type": "radio", "question": "Вы получите в подарок:", "hide_elements": [".quiz-block__bottom", ".quiz-block__progress", ".quiz-block__header"]}'>
+
+              <div class="quiz-block__icons">
+                <div class="quiz-block__icon">
+                  <div class="quiz-block__icon-svg">
+                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M4.66667 9.33867C7.24 9.33867 9.33333 7.24533 9.33333 4.672C9.33333 2.09867 7.24 0.00533326 4.66667 0.00533326C2.09333 0.00533326 0 2.09867 0 4.672C0 7.24533 2.09333 9.33867 4.66667 9.33867ZM4.66667 2.672C5.77333 2.672 6.66667 3.56533 6.66667 4.672C6.66667 5.77867 5.77333 6.672 4.66667 6.672C3.56 6.672 2.66667 5.77867 2.66667 4.672C2.66667 3.56533 3.56 2.672 4.66667 2.672ZM0.00266647 19.4493L19.4533 0L21.3387 1.88533L1.88933 21.3347L0.00266647 19.4493ZM16.6667 12.0053C14.0933 12.0053 12 14.0987 12 16.672C12 19.2453 14.0933 21.3387 16.6667 21.3387C19.24 21.3387 21.3333 19.2453 21.3333 16.672C21.3333 14.0987 19.24 12.0053 16.6667 12.0053ZM16.6667 18.672C15.56 18.672 14.6667 17.7787 14.6667 16.672C14.6667 15.5653 15.56 14.672 16.6667 14.672C17.7733 14.672 18.6667 15.5653 18.6667 16.672C18.6667 17.7787 17.7733 18.672 16.6667 18.672Z" fill="white"/>
+                    </svg>
+                  </div>
+                  <span class="quiz-block__icon-text">Рассрочка 0%</span>
+                </div>
+
+                <div class="quiz-block__icon">
+                  <div class="quiz-block__icon-svg">
+                    <svg width="30" height="24" viewBox="0 0 30 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M24 0H2.66667C1.18667 0 0.0133333 1.18667 0.0133333 2.66667L0 18.6667C0 20.1467 1.18667 21.3333 2.66667 21.3333H16V18.6667H2.66667V10.6667H26.6667V2.66667C26.6667 1.18667 25.48 0 24 0ZM24 5.33333H2.66667V2.66667H24V5.33333ZM29.3333 17.3333V20H25.3333V24H22.6667V20H18.6667V17.3333H22.6667V13.3333H25.3333V17.3333H29.3333Z" fill="white"/>
+                    </svg>
+                  </div>
+                  <span class="quiz-block__icon-text">Возврат стоимости</span>
+                </div>
+
+                <div class="quiz-block__icon">
+                  <div class="quiz-block__icon-svg">
+                    <svg width="22" height="27" viewBox="0 0 22 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M8.66667 14.4884H7.33333C6.22667 14.4884 5.33333 13.595 5.33333 12.4884C5.33333 11.3817 6.22667 10.4884 7.33333 10.4884H8.66667V9.15504C8.66667 8.04837 9.56 7.15504 10.6667 7.15504C11.7733 7.15504 12.6667 8.04837 12.6667 9.15504V10.4884H14C15.1067 10.4884 16 11.3817 16 12.4884C16 13.595 15.1067 14.4884 14 14.4884H12.6667V15.8217C12.6667 16.9284 11.7733 17.8217 10.6667 17.8217C9.56 17.8217 8.66667 16.9284 8.66667 15.8217V14.4884ZM9.73333 0.168369L1.73333 3.16837C0.693334 3.56837 0 4.55504 0 5.67503V11.9417C0 18.675 4.54667 24.955 10.6667 26.4884C16.7867 24.955 21.3333 18.675 21.3333 11.9417V5.67503C21.3324 5.13245 21.1659 4.60306 20.8562 4.15755C20.5465 3.71204 20.1083 3.37161 19.6 3.1817L11.6 0.181702C11 -0.0582976 10.3333 -0.0582976 9.73333 0.168369Z" fill="white"/>
+                    </svg>
+                  </div>
+                  <span class="quiz-block__icon-text">Пожизненная гарантия</span>
+                </div>
+              </div>
+
+              <form class="step-form">
+                <input type="text" class="input-phone" placeholder="+7 (___) ___-__-__" required data-mask-phone>
+                <button class="btn-an">
+                  <span>Получить расчёт + подарки</span>
+                  <svg viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M8.33333 15.2917L7.125 14.1917C2.83333 10.3 0 7.73333 0 4.58333C0 2.01667 2.01667 0 4.58333 0C6.03333 0 7.425 0.675 8.33333 1.74167C9.24167 0.675 10.6333 0 12.0833 0C14.65 0 16.6667 2.01667 16.6667 4.58333C16.6667 7.73333 13.8333 10.3 9.54167 14.2L8.33333 15.2917Z" fill="#001F2E"/>
+                  </svg>
+                </button>
+                <div class="step-form__politic">
+                  <span>Нажимая на кнопку, вы соглашаетесь на</span>
+                  <a href="#" target="_blank">обработку персональных данных</a>
+                </div>
+              </form>
+
+            </div>
+
           </div>
         </div>
 
@@ -360,12 +410,6 @@
               <path d="M3.825 9H16V7H3.825L9.425 1.4L8 0L0 8L8 16L9.425 14.6L3.825 9Z" fill="white"/>
             </svg>
             <span>Назад</span>
-          </button>
-          <button class="quiz-block__btn quiz-block__btn-next">
-            <span>Далее</span>
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M12.175 9H0V7H12.175L6.575 1.4L8 0L16 8L8 16L6.575 14.6L12.175 9Z" fill="white"/>
-            </svg>
           </button>
 
         </div>
@@ -430,7 +474,7 @@
       </div>
     </div>
 
-    <!-- <div class="portfolio">
+    <div class="portfolio">
       <div class="portfolio__container container">
         <h2 class="portfolio__title">До/после</h2>
 
@@ -505,7 +549,7 @@
         </div>
 
       </div>
-    </div> -->
+    </div>
 
     <div class="form-block">
       <div class="form-block__container container">
@@ -515,7 +559,7 @@
         </div>
         
         <form class="form-block__form">
-          <input type="tel" id="phone" name="phone" class="form-block__input" placeholder="+7 (___) ___-__-__" required>
+          <input type="tel" id="phone" name="phone" class="input-phone" placeholder="+7 (___) ___-__-__" required data-mask-phone>
           
           <button class="form-block__btn btn-an">Получить консультацию</button>
         </form>
