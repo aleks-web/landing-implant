@@ -1,6 +1,7 @@
 import "./assets/js/utils.js";
 import "./assets/js/mask.js";
 import "./assets/js/splide.js";
+import "./assets/js/quiz.js";
 import "./assets/js/modal.js";
 import "./scss/index.scss";
 import "./assets/js/components/agree.js";

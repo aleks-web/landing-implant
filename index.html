@@ -197,14 +197,53 @@
 
         <div class="quiz-block__header">
           <div class="quiz-block__steps">
-            <span>Вопрос <span>1</span> из <span>4</span></span>
+            <span>Вопрос <span class="quiz-block__steps-num">1</span> из <span>4</span></span>
           </div>
 
-          <div class="quiz-block__pagination"></div>
+          <div class="progress" style="--progress-width: 20%"></div>
+        </div>
+
+        <div class="quiz-block__question"></div>
+
+        <div class="qz">
+          <div class="qz__content">
+
+            <div class="qz__step-content qz__step-content active" data-step-options='{"step_id": "1", "type": "radio", "question": "Какую челюсть нужно восстановить?"}'>
+              <div class="step-cards">
+                <div class="sc-radio-img" data-value="Верхнюю">
+                  <div class="sc-radio-img__radio-block">
+                    <div class="el-radio-t1 sc-radio-img__radio"></div>
+                    <div class="sc-radio-img__text">Верхнюю</div>
+                  </div>
+                </div>
+
+                <div class="sc-radio-img" data-value="Нижнюю">
+                  <div class="sc-radio-img__radio-block">
+                    <div class="el-radio-t1 sc-radio-img__radio"></div>
+                    <div class="sc-radio-img__text">Нижнюю</div>
+                  </div>
+                </div>
+
+                <div class="sc-radio-img" data-value="Обе челюсти">
+                  <div class="sc-radio-img__radio-block">
+                    <div class="el-radio-t1 sc-radio-img__radio"></div>
+                    <div class="sc-radio-img__text">Обе челюсти</div>
+                  </div>
+                </div>
+
+                <div class="sc-radio-img" data-value="Нужна консультация">
+                  <div class="sc-radio-img__radio-block">
+                    <div class="el-radio-t1 sc-radio-img__radio"></div>
+                    <div class="sc-radio-img__text">Нужна консультация</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
         </div>
 
         <div class="quiz-block__bottom">
-
 
           <div class="quiz-block__icons">
             <div class="quiz-block__icon">
@@ -235,7 +274,13 @@
             </div>
           </div>
 
-          <button class="quiz-block__btn">
+          <button class="quiz-block__btn quiz-block__btn-prev">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M3.825 9H16V7H3.825L9.425 1.4L8 0L0 8L8 16L9.425 14.6L3.825 9Z" fill="white"/>
+            </svg>
+            <span>Назад</span>
+          </button>
+          <button class="quiz-block__btn quiz-block__btn-next">
             <span>Далее</span>
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M12.175 9H0V7H12.175L6.575 1.4L8 0L16 8L8 16L6.575 14.6L12.175 9Z" fill="white"/>

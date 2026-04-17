@@ -139,6 +139,16 @@
     border-radius: 20px;
     overflow: hidden;
     font-weight: 700;
+    min-width: max-content;
+    font-size: 12px;
+
+    @include utils.from('s') {
+      font-size: 14px;
+    }
+
+    @include utils.from('md') {
+      font-size: 16px;
+    }
   }
 
   &__icon {
@@ -223,16 +233,69 @@
 
   }
 
-  &__pagination {
+  &__header {
     display: flex;
     align-items: center;
-    justify-content: center;
-    height: 6px;
-    position: relative;
-    @include utils.pseudoBg(red);
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 10px;
+
+    @include utils.from('s') {
+      flex-direction: row;
+      margin-top: 20px;
+    }
+  }
+
+  &__question {
+    color: white;
+    font-weight: 600;
+    font-size: 18px;
+    margin: 20px 0;
+
+    @include utils.from(s) {
+      font-size: 20px;
+    }
+
+    @include utils.from(sm) {
+      font-size: 22px;
+    }
+
+    @include utils.from(md) {
+      font-size: 24px;
+    }
+  }
+}
+
+// Progress bar
+.progress {
+  --progress-width: 10%;
+  height: 8px;
+  width: 100%;
+  background-color: #cbcde2;
+  border-radius: 50px;
+  overflow: hidden;
+
+  @media (max-width: 300px) {
+    height: 15px;
+  }
+
+
+  &:before {
+    content: "";
+    display: block;
+    background-color: #0F1524;
+    width: var(--progress-width);
+    height: 100%;
+    transition: .5s;
+  }
+
+  &_ready {
+    background-color: #9CBC7E;
+    --progress-width: 100% !important;
 
     &:before {
-      border-radius: 6px;
+      background-color: #9CBC7E;
     }
   }
 }
