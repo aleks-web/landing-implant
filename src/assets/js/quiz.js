@@ -330,10 +330,10 @@ document.addEventListener('DOMContentLoaded', () => {
         result.phone = clearPhone(input.value);
 
         try {
+            document.querySelector('.quiz-block').classList.add('quiz-block__loading');
             sender(result);
-            document.querySelector('.quiz-block').classList.add('step-form__loading');
         } catch (e) {
-            document.querySelector('.quiz-block').classList.remove('step-form__loading');
+            document.querySelector('.quiz-block').classList.remove('quiz-block__loading');
         }
     }
 

@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     document.addEventListener('fetchLeadSuccess', async (e) => {
         document.querySelector('.loading')?.remove();
+        document.querySelector('.quiz-block__loading')?.remove();
         const modal = document.querySelector('.modal-wrapper--loading');
         if (modal) {
             modal.classList.remove('modal-wrapper--loading');
