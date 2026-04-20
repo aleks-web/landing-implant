@@ -336,5 +336,4 @@ document.addEventListener('DOMContentLoaded', () => {
             document.querySelector('.quiz-block').classList.remove('quiz-block__loading');
         }
     }
-
 });
