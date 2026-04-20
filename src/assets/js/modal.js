@@ -84,6 +84,7 @@ export default class Modal {
         bgModal.style.width = '100%';
         bgModal.style.height = '100%';
         bgModal.style.backgroundColor = 'transparent';
+        bgModal.style.backdropFilter = 'blur(5px)';
         bgModal.classList.add('modal-wrapper');
         bgModal.style.zIndex = Modal.#getMaxZIndex() + 10;
 
