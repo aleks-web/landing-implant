@@ -114,6 +114,11 @@
 
         @include utils.from('xl') {
             max-width: 440px;
+            margin-right: 50px;
+        }
+
+        @include utils.from('xxl') {
+            margin-right: 80px;
         }
 
         img {
