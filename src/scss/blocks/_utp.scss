@@ -13,7 +13,6 @@
 
   @include utils.from('sm') {
     font-size: 16px;
-
   }
 
   @include utils.from('md') {
@@ -55,7 +54,23 @@
 
   &__title {
     text-align: center;
+    font-size: 22px;
+    margin:  0 auto;
     margin-bottom: 20px;
+    color: #272D3A;
+
+    @include utils.from(md) {
+      font-size: 24px;
+    }
+
+    @include utils.from(lg) {
+      font-size: 26px;
+    }
+
+    @include utils.from(xxl) {
+      font-size: 36px;
+      max-width: 82%;
+    }
   }
 
   &__wrap {
@@ -75,14 +90,28 @@
     align-items: center;
     gap: 20px;
 
+    @include utils.from(xxl) {
+      padding: 20px;
+    }
+
     &__svg {
         background-color: rgba(138, 218, 255, 0.1);
         border-radius: 10px;
         padding: 10px;
 
+        @include utils.from(md) {
+          padding: 15px;
+        }
+
         svg {
             width: 20px;
             height: 20px;
+            display: flex;
+
+            @include utils.from(md) {
+              width: 30px;
+              height: 30px;
+            }
         }
     }
 

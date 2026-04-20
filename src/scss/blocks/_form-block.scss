@@ -16,19 +16,14 @@
         gap: 2%;
     }
 
-    &__input,
+    .input-phone,
     &__btn {
         width: 49%;
     }
   }
 
   @include utils.from('md') {
-    margin-top: 40px;    
-
-    &__top {
-      width: 50%;
-      gap: 10px!important;    
-    }
+    margin-top: 40px;
 
     &__container {
       flex-direction: row!important;
@@ -37,7 +32,6 @@
     }
 
     &__descr {
-      color: #fff;
       font-weight: 300;
     }
   }
@@ -45,10 +39,6 @@
   @include utils.from('lg') {  
     &__container {
       padding: 50px 40px 40px 40px!important;
-    }  
-
-    &__top {
-      gap: 0!important;    
     }
 
     &__title {
@@ -59,7 +49,7 @@
       width: 50%;
     }
 
-    &__input,
+    .input-phone,
     &__btn {
       padding: 15px 30px!important;
     }
@@ -79,15 +69,38 @@
     display: flex;
     flex-direction: column;
     gap: 15px;
+
+    @include utils.from(md) {
+      width: 50%;
+      gap: 10px;
+    }
+
+    @include utils.from(xl) {
+      gap: 20px;
+    }
   }
 
   &__title {
     font-size: 24px;
-    color: #fff;
+    color: #E4F2FD;
+    font-weight: bold;
+
+    @include utils.from(xl) {
+      font-size: 28px;
+    }
   }
 
   &__descr {
     line-height: 1.5em;
+    color: #E4F2FD;
+
+    @include utils.from(lg) {
+      max-width: 400px;
+    }
+
+    @include utils.from(xl) {
+      font-size: 18px;
+    }
   }
 
   &__form {

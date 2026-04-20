@@ -16,6 +16,14 @@
   pointer-events: none;
 }
 
+.modal-wrapper--loading .modal-call {
+  background-color: #0F1524;
+
+  &:after {
+    z-index: 1;
+  }
+}
+
 .modal-wrapper--loading .modal {
   position: relative;
 
@@ -54,6 +62,7 @@
     transition: .2s all;
     padding: 5px;
     box-sizing: content-box;
+    color: white;
 
     &:hover {
       color: red;
@@ -70,6 +79,8 @@
 
 .modal-success {
   position: relative;
+  border-radius: var(--main-radius);
+  overflow: hidden;
 
   * {
     position: relative;
@@ -79,7 +90,7 @@
 
   &:before {
     background: #0F1524;
-    opacity: 0.8;
+    opacity: 0.88;
     content: '';
     position: absolute;
     top: 0;
@@ -192,6 +203,187 @@
 
       @include utils.from('md') {
         font-size: 22px;
+      }
+    }
+  }
+}
+
+.modal-call {
+  position: relative;
+  max-width: 500px;
+  border-radius: var(--main-radius);
+  overflow: hidden;
+
+  * {
+    position: relative;
+    z-index: 1;
+  }
+
+  &:after {
+    background: #0F1524;
+    opacity: 0.88;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    transition: .2s all;
+  }
+
+  &__title {
+    font-size: 24px;
+    color: white;
+    text-align: center;
+    color: white;
+
+    @include utils.from('s') {
+      font-size: 30px;
+    }
+
+    @include utils.from('sm') {
+      text-align: left;
+    }
+
+    span {
+      color: #2f3fb7;
+    }
+  }
+
+  &__desc {
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    font-weight: 300;
+    text-align: center;
+    color: #A0B4C4;
+
+    @include utils.from('s') {
+      font-size: 16px;
+    }
+
+    @include utils.from('sm') {
+      font-size: 18px;
+      text-align: left;
+    }
+
+    > span > span {
+      color: var(--main-color);
+      font-weight: 600;
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+
+    @include utils.from('md') {
+      flex-direction: row;
+    }
+
+    @include utils.from('md') {
+      margin-top: 40px;
+    }
+
+    &-text {
+      font-size: 16px;
+      text-align: center;
+
+      @include utils.from('md') {
+        max-width: 280px;
+        text-align: left;
+        font-weight: 400;
+      }
+    }
+  }
+
+  &__left {
+    @include Inter.setFont(14px, 300);
+  }
+
+  &__right {
+    @include Inter.setFont(14px, 300);
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    > span {
+      text-align: center;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+
+      @include utils.from('md') {
+        justify-content: right;
+      }
+    }
+
+    a {
+      text-decoration: unset;
+      color: #2A2A2A;
+      font-weight: bold;
+      font-size: 18px;
+      text-align: center;
+      justify-content: center;
+      display: flex;
+      margin: 0 auto;
+
+      @include utils.from('md') {
+        font-size: 22px;
+      }
+    }
+  }
+
+  .input-phone {
+    background-color: rgba(255, 255, 255, 0.03);
+    border-color: #6B7280;
+    padding: 20px 20px;
+    width: 100%;
+    margin-top: 20px;
+    border-radius: var(--main-radius);
+    font-size: 16px;
+    color: white;
+    transition: .2s color;
+
+    &:hover::placeholder {
+      color: white;
+    }
+
+    &:focus {
+      border-color: white;
+
+      &::placeholder {
+        color:white;
+      }
+    }
+
+    &::placeholder {
+      color: #6B7280;
+      transition: .2s color;
+    }
+
+    & ~ button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 16px;
+      padding: 20px;
+      width: 100%;
+      margin-top: 10px;
+      border-radius: var(--main-radius);
+      background-color: var(--main-color);
+      border-color: transparent;
+      color: #001F2E;
+      box-shadow: 0px 10px 15px -3px rgba(125, 211, 252, 0.2);
+
+      @include utils.from(s) {
+        font-size: 16px;
       }
     }
   }

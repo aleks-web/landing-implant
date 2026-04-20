@@ -139,16 +139,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
         modal.querySelectorAll('form').forEach(form => {
             const phone = form.querySelector('[data-mask-phone]');
-            const name = form.querySelector('[name="name"]');
-
-            const inputAgree = form.querySelector('.agree [type="checkbox"]');
-            const btnSubmit = form.querySelector('button');
 
             form.onsubmit = async (e) => {
                 e.preventDefault();
 
                 const result = { phone: clearPhone(phone.value) };
-                if (name) { result.name = name; }
 
                 try {
                     sender(result);
@@ -157,17 +152,6 @@ document.addEventListener('DOMContentLoaded', () => {
                     modal.classList.remove('modal-wrapper--loading');
                 }
             }
-
-            function validateForm(e) {
-                const nameCheck = name?.value ? name?.value : true;
-                if (phone.value && nameCheck && inputAgree.checked) {
-                    btnSubmit.classList.remove('disabled');
-                }
-            }
-
-            phone?.addEventListener('input', validateForm);
-            name?.addEventListener('input', validateForm);
-            inputAgree?.addEventListener('input', validateForm);
         });
     }
 

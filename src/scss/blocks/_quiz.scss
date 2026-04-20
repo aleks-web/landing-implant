@@ -383,7 +383,6 @@
 
 
 .step-5 {
-  display: flex;
   flex-direction: column;
   gap: 20px;
   max-width: max-content;
@@ -428,6 +427,9 @@
     }
 
     a {
+      max-width: max-content;
+      text-align: center;
+      margin: 0 auto;
       color: inherit;
       transition: .2s color;
 

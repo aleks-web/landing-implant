@@ -323,11 +323,8 @@ document.addEventListener('DOMContentLoaded', () => {
     .setQuestionElsBySelector('.quiz-block__question')
     .endSetSelectors();
 
-    window.quiz.setStep(5);
-
     document.querySelector('.step-form').onsubmit = (e) => {
         e.preventDefault();
-        console.log(e);
         const input = e.currentTarget.querySelector('.input-phone');
         const result = { phone: clearPhone(input.value) };
         try {
