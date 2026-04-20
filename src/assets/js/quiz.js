@@ -325,8 +325,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     document.querySelector('.step-form').onsubmit = (e) => {
         e.preventDefault();
+        const result = window.quiz.getResult();
         const input = e.currentTarget.querySelector('.input-phone');
-        const result = { phone: clearPhone(input.value) };
+        result.phone = clearPhone(input.value);
+
         try {
             sender(result);
             document.querySelector('.quiz-block').classList.add('step-form__loading');
