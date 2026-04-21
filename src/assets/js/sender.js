@@ -29,7 +29,7 @@ export default function sender(userData) {
             source: 'website',
             domen: window.location.hostname,
             city: 72,
-            title: `Экспертный журнал о стоматологах \nЗаявка с сайта ${window.location.hostname}`,
+            title: `Имплантация всей челюсти \nЗаявка с сайта ${window.location.hostname}`,
             utm_source: utmSource,
             utm_campaign: utmCampaign,
             utm_content: utmContent,
