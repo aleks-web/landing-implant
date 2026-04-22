@@ -28,7 +28,7 @@ export default function sender(userData) {
         {
             source: 'website',
             domen: window.location.hostname,
-            city: 72,
+            city: 66,
             title: `Имплантация всей челюсти \nЗаявка с сайта ${window.location.hostname}`,
             utm_source: utmSource,
             utm_campaign: utmCampaign,
