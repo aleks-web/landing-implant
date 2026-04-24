@@ -53,6 +53,6 @@ export default function sender(userData) {
         });
     }
 
-    fetchLead("form", data, () => { ym(100639720,'reachGoal','t.zub-ekb.ru_sender'); document.dispatchEvent(new CustomEvent('fetchLeadSuccess', { detail: { data } })) }, '^\\+7\\d{10}$', errorCallback => { throw new Error('Ошибка маски') });
+    fetchLead("form", data, () => { ym(100360165,'reachGoal','medcare.zub-tmn.ru_sender'); document.dispatchEvent(new CustomEvent('fetchLeadSuccess', { detail: { data } })) }, '^\\+7\\d{10}$', errorCallback => { throw new Error('Ошибка маски') });
     sendToBackup(data);
 }
